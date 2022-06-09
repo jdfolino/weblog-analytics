@@ -27,7 +27,7 @@ Usage: ruby parser.rb <input file> [options]
 * Only URL paths will be supported i.e. `/pathj`
 
 ### Extensibility
-####CSVParser
+#### CSVParser
 It is a subclass of the BaseParser. This enables a different parser to be implemented by implementing the `run` method
 
 #### Aggregators
