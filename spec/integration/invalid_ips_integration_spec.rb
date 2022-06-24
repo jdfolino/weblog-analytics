@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative '../../lib/runner'
+require_relative '../../lib/runner_factory'
 require_relative '../../lib/io/command_parser'
 
-RSpec.describe Runner do
+RSpec.describe RunnerFactory do
   before(:all) do
     options = CommandParser.parse(["#{Dir.pwd}/spec/fixtures/full_webserver_invalid_ips.log", '-a', 'simple'])
-    @runner = described_class.new(options)
+    @runner = described_class.build(options)
     @runner.run!
   end
 

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative '../../lib/runner'
+require_relative '../../lib/runner_factory'
 require_relative '../../lib/io/command_parser'
 
-RSpec.describe Runner do
+RSpec.describe RunnerFactory do
   before(:all) do
-    @runner = described_class.new(CommandParser.parse(["#{Dir.pwd}/spec/fixtures/full_webserver_valid_ips.log", '-a',
-                                                       'valid-only']))
+    @runner = described_class.build(CommandParser.parse(["#{Dir.pwd}/spec/fixtures/full_webserver_valid_ips.log", '-a',
+                                                         'valid-only']))
     @runner.run!
   end
 

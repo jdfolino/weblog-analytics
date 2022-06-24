@@ -19,6 +19,10 @@ class UriVisitDataAggregate
     @ip_addresses.size
   end
 
+  def average_views
+    @visit_count.to_f / unique_visit_count
+  end
+
   def to_s
     "uri: #{uri}, visit_count: #{visit_count}, unique_visit_count: #{unique_visit_count}"
   end

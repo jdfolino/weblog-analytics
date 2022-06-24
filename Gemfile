@@ -2,8 +2,6 @@
 
 source 'https://rubygems.org'
 
-gem 'activesupport'
-gem 'colorize'
 gem 'ipaddress', '~> 0.8.3'
 gem 'logger', '~> 1.4', '>= 1.4.2'
 
